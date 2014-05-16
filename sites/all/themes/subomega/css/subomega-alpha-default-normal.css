@@ -1,0 +1,14 @@
+.logo-img {
+     height: auto;
+     margin-right: -18px;
+     margin-top: 17px;
+     width: 242px;
+}
+
+.site-name a {
+     letter-spacing: 1px;
+}
+
+.responsive-layout-normal .site-name {
+     font-size: 36px;
+}

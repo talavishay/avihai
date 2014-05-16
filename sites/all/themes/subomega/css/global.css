@@ -1,0 +1,48 @@
+#block-search-form {
+     float: left;
+}
+
+.block .content img {
+     height: auto ! important;
+     max-width: 100%;
+}
+
+.block {
+     display: inline-block;
+}
+
+#section-header {
+     background-color: #005941;
+}
+
+.site-name a {
+     color: #FFFFFF;
+     font-family: tahoma;
+     font-weight: 200;
+     letter-spacing: 1px;
+     text-decoration: none;
+}
+
+.site-name {
+     text-align: left;
+}
+
+.logo-img {
+     float: right;
+}
+
+.mobile {
+     display: none ;
+}
+
+.front #page-title {
+     display: none;
+}
+
+html[lang="he"] .language-switcher-locale-url .he {
+     display: none;
+}
+
+html[lang="en"] .language-switcher-locale-url .en {
+     display: none;
+}
