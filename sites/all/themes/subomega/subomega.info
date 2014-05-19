@@ -71,6 +71,15 @@ settings[alpha_css][omega-menu.css] = 'omega-menu.css'
 settings[alpha_css][omega-forms.css] = 'omega-forms.css'
 settings[alpha_css][omega-visuals.css] = 'omega-visuals.css'
 settings[alpha_css][global.css] = 'global.css'
+css[general.css][name] = 'general styles'
+css[general.css][description] = ''
+css[general.css][options][weight] = '11'
+
+css[global_text.css][name] = 'text style -- editor'
+css[global_text.css][description] = ''
+css[global_text.css][options][weight] = '11'
+
+
 settings[alpha_debug_block_toggle] = '1'
 settings[alpha_debug_block_active] = '1'
 settings[alpha_debug_grid_toggle] = '1'

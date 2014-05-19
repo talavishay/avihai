@@ -1,0 +1,71 @@
+.logo-img {
+  height: auto;
+  margin-top: 17px;
+  position: relative;
+  right: -14px;
+  width: 240px;
+}
+
+.grid-12.region {
+  width: 960px;
+  margin: 0px;
+}
+#edit-search-block-form--2, #search-block-form .form-type-textfield form-item-search-block-form input {
+  width: 175px;
+}
+.block-system.block-menu .block-title{
+	display: none;
+}
+.logo-img {
+     height: auto;
+     margin-top: 17px;
+     width: 242px;
+}
+
+.site-name a {
+     letter-spacing: 1px;
+}
+#region-menu {
+  width: 100%;
+  margin: 0px;
+}
+.responsive-layout-normal .menu li {
+ display:inline;
+}
+.responsive-layout-normal .site-name {
+    font-size: 36px;
+margin:67px 0  3px 37px;
+}
+/*front*/
+
+.responsive-layout-normal #zone-menu-wrapper {
+background-color: #63809B;
+box-shadow: 1px 1px 6px 3px #444444;
+}
+.responsive-layout-normal #zone-menu{
+min-height: 40px;
+}
+.responsive-layout-normal #zone-menu .menu a{
+font-size: 18px;
+line-height: 40px;
+}
+.responsive-layout-normal #block-system-main-menu .menu li a {
+  color: #ffffff;
+}
+#zone-branding-wrapper{
+min-height:125px;
+}
+
+.responsive-layout-normal #block-search-form {
+   margin: 9px 33px 4px;
+ 
+}
+#block-block-3 {
+   background-image: url("/sites/all/themes/subomega/images/line.png");
+background-position: right  center;
+background-repeat: no-repeat;
+font-size: 18px;
+line-height: 29px;
+margin-top: 18px;
+padding-right: 12px;
+}

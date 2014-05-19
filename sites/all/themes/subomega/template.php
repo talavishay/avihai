@@ -10,3 +10,8 @@
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
+drupal_add_js(drupal_get_path("theme", "subomega").'/js/subomega.js');
+
+ drupal_add_library('system', 'ui.tooltip');
+  drupal_add_library('system', 'effect.slide');
+

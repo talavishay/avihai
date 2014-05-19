@@ -1,0 +1,17 @@
+#first-time{
+	display:none;
+}
+ul.menu li {
+  display: inline;
+}
+.menu a:visited,
+.menu a:hover,
+.menu a{
+text-decoration:none;
+color: inherit;
+}
+
+
+.block > .block-inner > .content > p:last-of-type{
+	margin-bottom: 0px;
+}

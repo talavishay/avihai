@@ -1,6 +1,5 @@
-/*
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
-*/
+
 *{
 font-family: "Alef Hebrew",“Helvetica Neue”,Helvetica,Arial,sans-serif !important;
 }
@@ -14,32 +13,6 @@ a,h1,h2,h3,h4,h5,h6{
 }
 #block-search-form {
      float: left;
-}
-#search-block-form .form-submit {
-background-image: url("/sites/all/themes/subomega/images/magdelet.png") !important;
-background-repeat: no-repeat !important;
-border: 0 solid #FFFFFF !important;
-border-radius: 0 !important;
-height: 18px;
-margin: 0 0 0 5px !important;
-overflow: hidden !important;
-padding-bottom: 0 !important;
-padding-right: 0 !important;
-padding-top: 0 !important;
-text-indent: -9999px;
-width: 19px;
-}
-#edit-search-block-form--2,
-#search-block-form .form-type-textfield .form-item-search-block-form input{
-background-color: rgba(0, 0, 0, 0);
-border: 0 solid #FFFFFF !important;
-}
-#search-block-form .form-item-search-block-form{
-margin: 0px;
-}
-
-#first-time p {
-  display: none;
 }
 
 .block .content img {
@@ -71,7 +44,7 @@ text-decoration: none;
      float: right;
 }
 
-.fluid {
+.mobile {
      display: none ;
 }
 
@@ -90,15 +63,14 @@ html[lang="en"] .language-switcher-locale-url .en {
 
 #block-search-form {
 background-color: #E1E9F0;
+border: 1px solid #808080;
 border-radius: 10px;
 float: left;
 line-height: 21px;
+margin: 9px 5px 4px;
 padding: 0 3px;
 }
 #block-block-3 * {
   color: #457368;
 font-family: tahoma !important;
-}
-#block-locale-language {
-  display: none;
 }
