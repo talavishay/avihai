@@ -1,12 +1,13 @@
 .front .block .block-title {
-  background-color: buttonshadow;
-padding:  14px 10px;
+  padding: 14px 10px;
+font-size: 22px;
+font-weight: bold;
+color: #ffffff;
 }
 #block-nodeblock-6{
 background-color: rgba(0, 0, 0, 0) !important;
 }
 .front #section-content .block:not(#block-block-3)  {
-background-color: #808080;
 border-radius: 10px;
 margin: 10px 0;
 overflow: hidden;
@@ -16,8 +17,35 @@ overflow: hidden;
   float: left;
 }
 .node-media-block .field-name-body{
-  float: right;
+  color: #FFFFFF;
+float: right;
+font-size: 16px;
 }
+#block-nodeblock-7 .block-title {
+  background-color: #e4703a;
+}
+#block-nodeblock-7 {
+  background-color: #F6945E;
+}
+#block-nodeblock-8 .block-title {
+  background-color:#873661;
+}
+#block-nodeblock-9 .block-title {
+  background-color: #3e5b79;
+}
+#block-nodeblock-9 {
+  background-color: #63809b;
+}
+#block-nodeblock-10 .block-title {
+  background-color: #00748f;
+}
+#block-nodeblock-10  {
+  background-color: #519ab3;
+}
+#block-nodeblock-8 {
+  background-color: #9b5777;
+}
+
 .front aside.region-sidebar-second {
   overflow: hidden;
   width: 430px;
@@ -82,8 +110,8 @@ border: 1px solid #808080;
  display:inline;
 }
 .responsive-layout-normal .site-name {
-    font-size: 36px;
-margin:67px 0  3px 37px;
+  font-size: 36px;
+margin: 85px 0 3px 29px;
 }
 /*front*/
 
