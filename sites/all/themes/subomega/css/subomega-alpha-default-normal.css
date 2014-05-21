@@ -12,9 +12,11 @@
   padding-left: 0 !important;
 }
 
+/*
 .node-type-page.responsive-layout-normal #region-content{
   width: 435px;
 }
+*/
 #region-content {
 
 }
@@ -120,7 +122,7 @@ width: 430px;
   margin-bottom: 5px;
 }
 
-.front #region-content {
+.sidebar_second.zone-content-wrapper #region-content{
   width: 430px;
 }
 
