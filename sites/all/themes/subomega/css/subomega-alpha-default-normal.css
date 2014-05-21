@@ -129,6 +129,9 @@ width: 430px;
 }
 
 .sidebar_second.zone-content-wrapper #region-content{
+  width: 625px;
+}
+.front .sidebar_second.zone-content-wrapper #region-content{
   width: 430px;
 }
 
