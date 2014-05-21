@@ -1,3 +1,6 @@
+.region{
+	overflow:hidden;
+}
 .sidebar_first #region-content {
   width: 665px;
 }
