@@ -1,3 +1,6 @@
+.sidebar_first #region-content {
+  width: 665px;
+}
 #region-sidebar-first + #region-content + #region-sidebar-second {
 
 }
