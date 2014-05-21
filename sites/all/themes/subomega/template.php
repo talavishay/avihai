@@ -12,6 +12,6 @@
  */
 drupal_add_js(drupal_get_path("theme", "subomega").'/js/subomega.js');
 
- drupal_add_library('system', 'ui.tooltip');
-  drupal_add_library('system', 'effect.slide');
+// drupal_add_library('system', 'ui.tooltip');
+//drupal_add_library('system', 'effect.slide');
 

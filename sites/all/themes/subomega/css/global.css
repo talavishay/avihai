@@ -1,8 +1,19 @@
+
+img, div, a {
+  transition-duration: 1s !important;
+  transition-property: width,height;
+}
+
 /*
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
 */
+
 *{
 font-family: "Alef Hebrew",“Helvetica Neue”,Helvetica,Arial,sans-serif !important;
+}
+.not-front #page p {
+ font-size: 14px;
+color: #333333;
 }
 
 a,h1,h2,h3,h4,h5,h6{
@@ -14,6 +25,13 @@ a,h1,h2,h3,h4,h5,h6{
 }
 #block-search-form {
      float: left;
+}
+ .not-front #page {
+  background-color: #F0F0F0;
+}
+.not-front #zone-content{
+ background-color: #E6E6E6;
+padding: 30px 20px ;
 }
 #search-block-form .form-submit {
 background-image: url("/sites/all/themes/subomega/images/magdelet.png") !important;
@@ -31,6 +49,7 @@ width: 19px;
 }
 #edit-search-block-form--2,
 #search-block-form .form-type-textfield .form-item-search-block-form input{
+color: #63809b;
 background-color: rgba(0, 0, 0, 0);
 border: 0 solid #FFFFFF !important;
 }
@@ -46,7 +65,6 @@ margin: 0px;
      height: auto ! important;
      max-width: 100%;
 }
-
 .block {
      display: block;
 }
@@ -94,11 +112,34 @@ border-radius: 10px;
 float: left;
 line-height: 21px;
 padding: 0 3px;
+position: relative;
+z-index: 10;
 }
+#block-nodeblock-16 *,
 #block-block-3 * {
   color: #457368;
 font-family: tahoma !important;
 }
 #block-locale-language {
   display: none;
+}
+#block-nodeblock-16 *, #block-nodeblock-16 p {
+  font-size: 18px;
+  line-height: 30px;
+}
+#page-title, #page-title * {
+  font-size: 18px;
+  color: #f05602;
+}
+/*node 11*/
+
+#node-page-11 .content > .field {
+  margin-bottom: 70px;
+color: #3e3e3e;
+}
+.page-node-11 .field-name-field-youtube {
+  text-align: center;
+}
+.page-node-11 .field-item {
+  font-size: 14px;
 }

@@ -1,3 +1,6 @@
+.responsive-layout-fluid *{ 
+        font-family: "tahoma" !important;
+}
 .responsive-layout-fluid .zone-content .region {
   display: block;
   width: 100%;

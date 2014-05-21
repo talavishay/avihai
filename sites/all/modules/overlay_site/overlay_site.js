@@ -65,7 +65,9 @@ function responsive_layout_fluid(){
   	if (Drupal.omega.getCurrentLayout() == "fluid"){
 		jQuery('body.front.responsive-layout-fluid #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/mobile_front.png)").toggleClass("mobile");
 	} else {
+		jQuery('body.page-node-4.responsive-layout-normal #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/about.png)").toggleClass("normal");
 		jQuery('body.front.responsive-layout-normal #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/front.jpg)").toggleClass("normal");
+		jQuery('body.page-node-11.responsive-layout-normal #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/node-11.jpg)").toggleClass("normal");
 	}
   }
 
