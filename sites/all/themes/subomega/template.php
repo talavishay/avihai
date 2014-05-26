@@ -1,5 +1,43 @@
 <?php
+function subomega_node_form_alter(&$form, &$form_state){
+                $form['#attached']['css'][] = drupal_get_path("theme", "holy").'/css/programs_israel_node_form.css';
+}
 
+function subomega_breadcrumb($breadcrumb) {
+   if (!empty($breadcrumb)) {
+       $length = count($breadcrumb["breadcrumb"]);
+       if(isset($breadcrumb["breadcrumb"][$length-1])){
+        $breadcrumb["breadcrumb"][$length-1] = '<span class="last">'.$breadcrumb["breadcrumb"][$length-1].'</span>';
+       }
+     return '<div class="breadcrumb">'. implode(' <span class="breadcrumb_sep">>></span> ', $breadcrumb["breadcrumb"]) .'</div>';
+   }
+}
+
+
+/**
+* Add information about the number of sidebars
+*/
+function subomega_preprocess_html(&$variables) {
+    $variables['classes_array'][] = 'XXXXXXXXXX';
+//drupal_set_message(var_dump($variables['classes_array']));
+  // Code borrowed/adapted from D7 core.
+  // Classes originally added by D7 core, then removed by Omega 4 and now put back (ish) by this function.
+  // NOTE: D7 core used hyphens in class names, we need to use different classes so we're
+  // replacing hyphens with underscores (make sure your CSS is expecting this).
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['classes_array'][] = 'two_sidebars';
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['classes_array'][] = 'one_sidebar sidebar_first';
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['classes_array'][] = 'one_sidebar sidebar_second';
+  }
+  else {
+    $variables['classes_array'][] = 'no_sidebars';
+  }
+return     $variables;
+}
 /**
  * @file
  * This file is empty by default because the base theme chain (Alpha & Omega) provides

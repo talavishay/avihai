@@ -1,0 +1,16 @@
+body,div,p,a{
+}
+ul.nice-menu-down li li.menuparent:hover ,
+ul.nice-menu-down li li.menuparent ,
+ul.nice-menu-down li.menuparent:hover,
+ul.nice-menu-down li.menuparent {
+/*  background-position: left center;*/
+  background-image: none;
+}
+
+.not-front a#home {
+float:right;
+}
+#block-search-form{
+float:left;
+}

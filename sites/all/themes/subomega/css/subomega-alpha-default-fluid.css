@@ -5,6 +5,17 @@
   display: block;
   width: 100%;
 }
+.responsive-layout-fluid .block .content img {
+float: none !important;
+height: auto !important;
+margin: 0 auto !important;
+width: 96% !important;
+display: block;
+
+}
+.responsive-layout-fluid #block-blockify-blockify-breadcrumb {
+  display: none;
+}
 
 .responsive-layout-fluid .fluid {
      display: block ;
@@ -178,4 +189,7 @@ word-wrap: normal;
 }
 #block-block-4 li:nth-child(8) {
   margin-left: 0 !important;
+}
+.responsive-layout-fluid .field-type-text-with-summary td {
+  display: block;
 }

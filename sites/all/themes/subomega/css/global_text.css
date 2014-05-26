@@ -1,15 +1,21 @@
-/*@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+*/
+
 @font-face {
-    font-family: 'iskoola_potaregular';
-    src: url('/sites/all/themes/subomega/fonts/iskpota-webfont.eot');
-    src: url('/sites/all/themes/subomega/fonts/iskpota-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/sites/all/themes/subomega/fonts/iskpota-webfont.woff') format('woff'),
-         url('/sites/all/themes/subomega/fonts/iskpota-webfont.ttf') format('truetype'),
-         url('/sites/all/themes/subomega/fonts/iskpota-webfont.svg#iskoola_potaregular') format('svg');
+    font-family: 'Alef Hebrew';
+    src: url('fonts/Alef-Regular.eot');
+    src: url('fonts/Alef-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Alef-Regular.woff') format('woff'),
+         url('fonts/Alef-Regular.ttf') format('truetype'),
+         url('fonts/Alef-Regular.svg#alefregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
-*/
+td{
+vertical-align:top;
+}
 *,p,li,a,b,span,div,.title.node_type{ 
         font-family: "Alef Hebrew" ;
 }
@@ -52,14 +58,13 @@ ol {
 }
 
 ul {
-  list-style: disc;
+/*  list-style: disc;*/
 }
 
 ul ul,
 ol ol {
   padding-top: 0.5em;
 }
-
 .node ol,
 .node ul {
   padding-left: 1.2em;
@@ -104,14 +109,17 @@ p {
 .field .field-label {
   font-size: 14.5px;
 }
-#ckeditor-custom-id a,
-#ckeditor-custom-id a:link, 
-#ckeditor-custom-id a:visited,
+.CSS1Compat li a,
+.CSS1Compat a:link, 
+.CSS1Compat a:visited,
 .field-name-body a,
 .field-name-body a:link, 
-.field-name-body a:visited{
+.field-name-body a:visited,
+.field-name-field-block a,
+.field-name-field-block a:link, 
+.field-name-field-block a:visited{
 text-decoration-color: #fc6704;
- color: #fc6704;
+ color: #fc6704 ;
 }
 
 .list {
@@ -167,5 +175,64 @@ background-repeat: no-repeat;
 padding-left: 13px;
 
 }
+.fieldblock-white-p {
+background: #f0f0f0;
+padding: 15px;
+border-radius: 5px;
+}
+.side-by-side{
+display:inline-block;
+padding: 0 2%;
+vertical-align: top;
+width: 44%;
+}
+.CSS1Compat li,
+.field-type-text-with-summary li,
+.field-widget-text-textarea-with-summary li,
+.list {
+  background-image: url("/sites/all/themes/subomega/images/bullet.png");
+  background-position: right 8px;
+  background-repeat: no-repeat;
+  padding-right: 10px;
+  list-style-image: none ;
+  list-style-type: none;
+  line-height: 19px;
+  padding-bottom: 10px;
+}
+.list-orange{
+  background-image: url("/sites/all/themes/subomega/images/bullet-orange.png") !important;
+}
+.list-orange a{
+text-decoration:none;
+color: #333333 !important;
+}
+.arrow-orange {
+  background-image: url("/sites/all/themes/subomega/images/arrow-orange.png");
+  background-position: left 3px;
+  background-repeat: no-repeat;
+  padding-left: 19px;
+}
+.arrow-blue {
+  background-image: url("/sites/all/themes/subomega/images/arrow-blue.png");
+  background-position: left 3px;
+  background-repeat: no-repeat;
+  padding-left: 19px;
+ 
+}
+.arrow-white {
+  background-image: url("/sites/all/themes/subomega/images/arrow-white.png");
+  background-position: left 3px;
+  background-repeat: no-repeat;
+  padding-left: 19px;
+  
+}
 
-
+#edit-field-block-und-0-value{
+width:250px;
+}
+.field-type-text-with-summary td {
+  padding-left: 18px;
+}
+.field-name-field-block .cke_3 {
+  width: 310px;
+}
