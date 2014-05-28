@@ -1,6 +1,5 @@
 <?php
 function subomega_node_form_alter(&$form, &$form_state){
-drupal_set_message("XXXXXXXXXXXXXXXXX");
                 $form['#attached']['css'][] = drupal_get_path("theme", "holy").'/css/programs_israel_node_form.css';
 }
 
@@ -19,7 +18,6 @@ function subomega_breadcrumb($breadcrumb) {
 * Add information about the number of sidebars
 */
 function subomega_preprocess_html(&$variables) {
-    $variables['classes_array'][] = 'XXXXXXXXXX';
 //drupal_set_message(var_dump($variables['classes_array']));
   // Code borrowed/adapted from D7 core.
   // Classes originally added by D7 core, then removed by Omega 4 and now put back (ish) by this function.
