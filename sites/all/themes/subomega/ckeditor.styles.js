@@ -11,5 +11,7 @@ CKEDITOR.addStylesSet( 'drupal', [
 { name : 'blue arrow', element : 'a',  attributes : { 'class' : 'arrow-blue' } }, 
 { name : 'white arrow', element : 'a',  attributes : { 'class' : 'arrow-white' } }, 
 /* Object Styles */ 
-{ name : 'Highlighted Row', element : 'tr', attributes : { 'class' : 'ncbc-highlighted-row' } } 
+{ name : 'Highlighted Row', element : 'tr', attributes : { 'class' : 'ncbc-highlighted-row' } } ,
+{ name : 'side block title', element : 'span', attributes : { 'class' : 'side_block_title' } } 
+
 ]);

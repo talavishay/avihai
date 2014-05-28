@@ -1,3 +1,8 @@
+
+div.contextual-links-wrapper ul.contextual-links {
+  background-color: #0000FF;
+  
+}
 #block-block-6{
 width:0px;
 height:0px;
@@ -29,18 +34,14 @@ font-family: "Alef Hebrew",“Helvetica Neue”,Helvetica,Arial,sans-serif !impo
 a,h1,h2,h3,h4,h5,h6{
 	text-decoration: none !important;
 }
-.i18n-en .menu .en.active,
-.i18n-he .menu .he.active{
-	display: none;
+.i18n-en #block-block-4 .en.active,
+.i18n-he #block-block-4 .he.active,
+.i18n-en .nice-menu .en.active,
+.i18n-he .nice-menu .he.active{
+	display: none !important;
 }
 #block-search-form {
      float: left;
-}
- .not-front #page {
-  background-color: #F0F0F0;
-}
-.not-front #zone-content{
- background-color: #E6E6E6;
 }
 #search-block-form .form-submit {
 background-color: rgba(0, 0, 0, 0) !important;
@@ -62,19 +63,22 @@ width: 19px;
 color: #63809b;
 background-color: rgba(0, 0, 0, 0);
 border: 0 solid #FFFFFF !important;
+  font-size: 16px;
+padding: 0px;
 }
 #search-block-form .form-item-search-block-form{
 margin: 0px;
+float: right;
 }
 
 #first-time p {
   display: none;
 }
 
-.block .content img {
+/*.block .content img {
      height: auto ! important;
      max-width: 100%;
-}
+}*/
 .block {
      display: block;
 }
@@ -98,6 +102,10 @@ text-decoration: none;
 .logo-img {
      float: right;
 }
+#page-sub-title {
+  font-size: 16px ;
+  font-weight: bold;
+}
 
 .fluid {
      display: none ;
@@ -120,7 +128,6 @@ display:none;
 }
 .not-front a#home {
 display:inline-block;
-background-image: url("/sites/all/themes/subomega/images/home-icon.png");
 background-position: right center;
 background-repeat: no-repeat;
 display: inline-block;
@@ -134,7 +141,7 @@ width: 21px;
 
 #block-search-form {
 background-color: #E1E9F0;
-border-radius: 10px;
+border-radius: 7px;
 float: right;
 /*padding: 0 3px;*/
 z-index: 10;
@@ -189,4 +196,194 @@ color: #3e3e3e;
 /*node 28*/
 #node-page-28 li a {
   color: #333333;
+}
+.page-node-32 #page-sub-title {
+  display: none;
+}
+/*vies- people*/
+
+#block-views-people-block-1 .block-title,
+.view-display-id-block_1 .views-field-field-category{
+  display: none;
+
+}
+.view-id-people h3 {
+  color: #4C647B;
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 25px;
+}
+.view-id-people .views-field-nothing a {
+  color: #333333;
+  font-size: 14px;
+}
+.view-id-people .views-field-nothing  {
+  margin-bottom: 14px;
+}
+.view-id-people .views-field-nothing a:hover {
+  color: #f05602;
+}
+/*node-type-people*/
+.node-type-people .field-name-title-field {
+color: #F05602;
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+.node-type-people .field-name-field-email {
+  color: #F05602;
+    font-size: 14px;
+}
+.node-type-people .field-name-field-role .field-item {
+  color: #333333;
+  font-size: 14px;
+}
+.node-type-people .field-name-field-category .field-item {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4c647b;
+}
+.node-type-people .field-name-body {
+  border-top: 1px solid #B0AEAE;
+}
+#block-fieldblock-node-people-default-field-block * {
+  color: #4C647B!important;
+}
+aside#region-sidebar-second .field-name-field-block .field-item {
+  margin-bottom: 20px;
+}
+.node-type-people #page-title{
+text-indent:-9999px;
+}
+html[lang=he] .node-type-people #page-title:after,
+.i18n-he .node-type-people #page-title:after{
+content: "האנשים";
+}
+html[lang=en] .node-type-people #page-title:after,
+.i18n-en .node-type-people #page-title:after{
+content: "pepole";
+}
+
+
+/*  NODE - TYPE - PEOPLE */
+.node-type-people #region-content {
+  position: relative;
+  top: -20px;
+}
+.field-name-field-category {
+  margin-bottom: 45px;
+}
+.field-name-field-image-profile {
+ float: right;
+margin-left: 25px;
+border: solid 1px black;
+border-radius: 5px;
+overflow: hidden;
+}
+.node-type-people .field-name-field-role {
+  min-height: 98px;
+}
+.responsive-layout-normal.node-type-people #region-sidebar-second{
+  left: -15px;
+  position: relative;
+  top: -30px;
+}
+.field-name-field-email a {
+  background: url("/sites/all/themes/subomega/images/email.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+  padding-right: 28px;
+}
+.node-type-people .field-name-field-email a{
+  color: #F05602;
+  font-size: 14px;
+}
+.node-type-people .field-name-body {
+  border-top: 1px solid #B0AEAE;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+#block-views-teams-block {
+  display: none;
+}
+
+/*	SEARCH */
+#block-system-main #search-form{
+display: none;
+}
+.search-result .title a {
+  color: #fa5c05 !important;
+  font-size: 16px;
+}
+.search-results li {
+  border-bottom: 2px solid #C9C5C5;
+}
+.search-results li:first-child {
+border-top: 2px solid #C9C5C5;
+padding-top: 10px !important;
+ 
+}
+.search-results .title {
+    display: inline-block;
+}
+.search-results li {
+  list-style: decimal inside none !important;
+  margin-bottom: 1em;
+  padding: 0 1px !important;
+}
+.page-search #block-blockify-blockify-breadcrumb{
+display:none;
+}
+.page-search #search-header span{
+color: #F05602;
+}
+
+#search-header {
+background-color: #005941;
+color: #FFFFFF;
+display: inline-block;
+font-size: 20px;
+font-weight: bold;
+padding: 6px 6px 10px;
+}
+html[lang=he] .page-search h1.title:before {
+  content: "תוצאות ";
+}
+html[lang=en] .page-search h1.title:after {
+  content: " results";
+}
+.page-search .item-list{
+direction: ltr;
+float: left;
+}
+.page-search .pager-previous > a ,
+.page-search .pager-next > a {
+  background: url("/sites/all/themes/subomega/images/pager-next.png") no-repeat scroll right center ;
+  display: inline-block;
+  height: 17px;
+  text-indent: -9999px;
+  width: 5px;
+}
+.page-search .pager-previous > a {
+background-position:left center;
+}
+.page-search .pager {
+  text-align: left !important;
+}
+.page-search .pager-current {
+color: #02497e !important;
+}
+.page-search .pager-first,
+.page-search .pager-last{
+display:none !important;
+}
+
+.page-search .item-list ul.pager li a{
+color: #4a7ea4;
+}
+.page-search .item-list ul.pager li {
+margin: 0 !important;
+padding: 0 4px;
+}
+
+.block-nodeblock .field-name-field-youtube iframe {
+  max-width: 100%;
 }

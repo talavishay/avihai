@@ -1,5 +1,6 @@
 <?php
 function subomega_node_form_alter(&$form, &$form_state){
+drupal_set_message("XXXXXXXXXXXXXXXXX");
                 $form['#attached']['css'][] = drupal_get_path("theme", "holy").'/css/programs_israel_node_form.css';
 }
 
@@ -79,3 +80,23 @@ function subomega_module_implements_alter(&$implementations, $hook) {
 	}
 }
 */
+function subomega_preprocess_search_results(&$vars) {
+  // search.module shows 10 items per page (this isn't customizable)
+  $itemsPerPage = 10;
+
+  // Determine which page is being viewed
+  // If $_REQUEST['page'] is not set, we are on page 1
+  $currentPage = (isset($_REQUEST['page']) ? $_REQUEST['page'] : 0) + 1;
+
+  // Get the total number of results from the global pager
+  $total = $GLOBALS['pager_total_items'][0];
+
+  // Determine which results are being shown ("Showing results x through y")
+  $start = (10 * $currentPage) - 9;
+  // If on the last page, only go up to $total, not the total that COULD be
+  // shown on the page. This prevents things like "Displaying 11-20 of 17".
+  $end = (($itemsPerPage * $currentPage) >= $total) ? $total : ($itemsPerPage * $currentPage);
+
+  // If there is more than one page of results:
+    $vars['search_totals'] = t('!total results found', array(      '!total' => $total  ));
+}

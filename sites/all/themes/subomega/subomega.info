@@ -77,6 +77,14 @@ css[global_text.css][name] = 'text style -- editor'
 css[global_text.css][description] = ''
 css[global_text.css][options][weight] = '11'
 
+css[nice_menus.css][name] = 'nice menus'
+css[nice_menus.css][description] = 'nice menus module override'
+css[nice_menus.css][options][weight] = '21'
+
+css[nice_menus_default.css][name] = 'nice menus defaults'
+css[nice_menus_default.css][description] = 'nice menus module override'
+css[nice_menus_default.css][options][weight] = '22'
+
 
 settings[alpha_debug_block_toggle] = '1'
 settings[alpha_debug_block_active] = '1'

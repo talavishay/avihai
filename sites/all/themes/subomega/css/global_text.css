@@ -211,12 +211,18 @@ color: #333333 !important;
   background-position: left 3px;
   background-repeat: no-repeat;
   padding-left: 19px;
+float:left;
+margin-bottom: 20px;
+
 }
 .arrow-blue {
   background-image: url("/sites/all/themes/subomega/images/arrow-blue.png");
   background-position: left 3px;
   background-repeat: no-repeat;
   padding-left: 19px;
+color: #4C647B !important;
+float:left;
+margin-bottom: 20px;
  
 }
 .arrow-white {
@@ -224,6 +230,9 @@ color: #333333 !important;
   background-position: left 3px;
   background-repeat: no-repeat;
   padding-left: 19px;
+float:left;
+margin-bottom: 20px;
+color: white !important;
   
 }
 
@@ -236,3 +245,11 @@ width:250px;
 .field-name-field-block .cke_3 {
   width: 310px;
 }
+.side_block_title{
+color: #461818;
+font-size: 18px !important;
+vertical-align: top;
+display: inline-block;
+margin-bottom: 10px;
+}
+
