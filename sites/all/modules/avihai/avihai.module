@@ -1,0 +1,10 @@
+<?php
+function avihai_form_alter(&$form, &$form_state,$form_id){
+                $form['#attached']['css'][] = drupal_get_path("module", "avihai").'/css/node_form.css';
+}
+
+function avihai_css_alter(&$css){
+	unset($css["sites/all/modules/nice_menus/css/nice_menus.css"]);
+	unset($css["sites/all/modules/nice_menus/css/nice_menus_default.css"]);
+	unset($css["sites/all/modules/nice_menus/css/nice_menus_default-rtl.css"]);
+}
