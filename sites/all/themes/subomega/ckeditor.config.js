@@ -7,7 +7,20 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
  WARNING: clear browser's cache after you modify this file.
  If you don't do this, you may notice that browser is ignoring all your changes.
  */
-CKEDITOR.config.contentsLangDirection='rtl';
+//CKEDITOR.config.contentsLangDirection='rtl';
+CKEDITOR.on( 'dialogDefinition', function( ev ) {
+    var dialogName = ev.data.name;
+    var dialogDefinition = ev.data.definition;
+
+    if ( dialogName == 'table' ) {
+        var info = dialogDefinition.getContents( 'info' );
+
+        info.get( 'txtWidth' )[ 'default' ] = '100%';       // Set default width to 100%
+        info.get( 'txtBorder' )[ 'default' ] = '0';         // Set default border to 0
+    }
+});
+
+CKEDITOR.replace( 'editor1' );
 CKEDITOR.editorConfig = function(config) {
   // [#1762328] Uncomment the line below to protect <code> tags in CKEditor (hide them in wysiwyg mode).
   // config.protectedSource.push(/<code>[\s\S]*?<\/code>/gi);

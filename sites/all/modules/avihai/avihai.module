@@ -1,10 +1,88 @@
 <?php
+function avihai_init(){
+	drupal_add_js(drupal_get_path("module", "avihai").'/js/avihai.js');	
+}
 function avihai_form_alter(&$form, &$form_state,$form_id){
                 $form['#attached']['css'][] = drupal_get_path("module", "avihai").'/css/node_form.css';
+                if($form_id == "block_admin_display_form"){
+
+drupal_add_js('jQuery(document).ready(function () { jQuery(".action-links a").attr("href", "/node/add/media-block");})', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+  }
+
 }
 
 function avihai_css_alter(&$css){
 	unset($css["sites/all/modules/nice_menus/css/nice_menus.css"]);
 	unset($css["sites/all/modules/nice_menus/css/nice_menus_default.css"]);
 	unset($css["sites/all/modules/nice_menus/css/nice_menus_default-rtl.css"]);
+}
+function avihai_block_list_alter(&$blocks){
+	$display_menu = true;
+	$node = menu_get_object();	
+	$menuParent = menu_get_active_trail();
+	if(isset($menuParent[1])){
+		if(isset($menuParent[1]["mlid"])){
+			if($menuParent[1]["mlid"] != 548 && $menuParent[1]["mlid"] != 557 && $menuParent[1]["mlid"] != 544){
+				$display_menu = false;						
+			}
+		} else {
+			if($menuParent[1]["map"][0] != "people"){		
+				$display_menu = false;
+			}
+		}
+	} else {					
+			$display_menu = false;
+	}
+	if(!is_null($node)){
+		if($node->type == "people"){
+			$display_menu = true;
+		}
+	}
+	if($display_menu){
+		drupal_add_js(array( "side_menu"=> $display_menu, "teams" => _get_teams()), 'setting');
+	}else{
+		unset($blocks["232"]);
+		drupal_add_js(array( "side_menu"=> $display_menu, "teams" => _get_teams()), 'setting');
+	}		
+}
+
+function _get_teams(){
+	$out = array();
+	$p = views_get_view_result('teams', 'default');
+	if (count($p) > 0) {
+		foreach ($p as $key => $val) {
+			if(term_nc($val->tid, $child_count = FALSE)){
+				$out[] = array("tid" => $val->tid, "name" => $val->field_name_field[0]["rendered"]["#markup"]);
+			}
+		}
+	}
+	return $out;
+}
+
+/**
+ * @param tid
+ * Term ID
+ * @param child_count
+ * TRUE - Also count all nodes in child terms (if they exists) - Default
+ * FALSE - Count only nodes related to Term ID
+ */
+function term_nc($tid, $child_count = TRUE) {
+	$tids = array($tid);
+
+	if ($child_count) {
+		$tids = array_merge($tids, term_get_children_ids($tid));
+	}
+
+	global $language;
+	$langs = array($language->language);
+	$langs[] = 'und';
+
+	$query = db_select('taxonomy_index', 't');
+	$query->condition('tid', $tids, 'IN');
+	$query->join('node', 'n', 't.nid = n.nid');
+	$query->condition('n.status', 1, '=');
+//	$query->condition('n.language', $langs, 'IN');
+
+	$count = $query->countQuery()->execute()->fetchField();
+	return $count;
 }

@@ -1,8 +1,14 @@
-
-div.contextual-links-wrapper ul.contextual-links {
-  background-color: #0000FF;
-  
+#section-footer,
+#section-content,
+#zone-menu,
+.site-name {
+display: none;
 }
+
+.responsive-layout-fluid #zone-menu-wrapper{
+visibility: hidden;
+}
+
 #block-block-6{
 width:0px;
 height:0px;
@@ -20,17 +26,17 @@ img, div:not(.block), a {
 
 *{
 font-family: "Alef Hebrew",“Helvetica Neue”,Helvetica,Arial,sans-serif !important;
+word-wrap: break-word;
 }
 .not-front #page p, .not-front li {
   color: #333333;
   font-size: 14px;
 }
 .field-name-field-block.field-type-text-with-summary * {
-  font-size: 14px;
+ font-size: 14px;
+color: #333333;
 }
-.field-name-field-block.field-type-text-with-summary p {
-  color: #333333;
-}
+
 a,h1,h2,h3,h4,h5,h6{
 	text-decoration: none !important;
 }
@@ -68,7 +74,7 @@ padding: 0px;
 }
 #search-block-form .form-item-search-block-form{
 margin: 0px;
-float: right;
+float: left;
 }
 
 #first-time p {
@@ -94,6 +100,12 @@ font-weight: 200;
 letter-spacing: 1px;
 text-decoration: none;
 }
+html[lang=en] .logo-img {
+  float: left;
+}
+html[lang=en] .site-name-slogan {
+  float: right;
+} 
 
 .site-name {
      text-align: left;
@@ -150,7 +162,7 @@ padding: 1px 10px 0 8px;
 }
 #block-search-form #edit-actions {
   display: block;
-  float: left;
+  float: right;
 }
 #block-search-form input.form-text {
 margin: 0px;
@@ -167,7 +179,7 @@ font-family: tahoma !important;
 }
 #block-nodeblock-16 *, #block-nodeblock-16 p {
   font-size: 18px;
-  line-height: 30px;
+line-height: 29px;
 }
 #page-title, #page-title * {
   font-size: 18px;
@@ -193,13 +205,11 @@ color: #3e3e3e;
 .page-node-11 .field-item {
   font-size: 14px;
 }
-/*node 28*/
-#node-page-28 li a {
-  color: #333333;
-}
+
 .page-node-32 #page-sub-title {
   display: none;
 }
+
 /*vies- people*/
 
 #block-views-people-block-1 .block-title,
@@ -217,8 +227,21 @@ margin-bottom: 25px;
   color: #333333;
   font-size: 14px;
 }
+
 .view-id-people .views-field-nothing  {
-  margin-bottom: 14px;
+background-image: url("/sites/all/themes/subomega/images/bullet.png");
+background-repeat: no-repeat;
+padding-right: 0px;
+padding-left: 15px;
+margin-bottom: 14px;
+}
+
+.i18n-he .view-id-people .views-field-nothing  {
+background-position: right  7px !important;
+padding-right: 10px;
+}
+.i18n-en .view-id-people .views-field-nothing  {
+background-position: left 7px ;
 }
 .view-id-people .views-field-nothing a:hover {
   color: #f05602;
@@ -252,24 +275,27 @@ margin-bottom: 15px;
 aside#region-sidebar-second .field-name-field-block .field-item {
   margin-bottom: 20px;
 }
+/*
 .node-type-people #page-title{
 text-indent:-9999px;
 }
-html[lang=he] .node-type-people #page-title:after,
-.i18n-he .node-type-people #page-title:after{
+
+ 
+.i18n-he.node-type-people #page-title:after{
 content: "האנשים";
 }
-html[lang=en] .node-type-people #page-title:after,
-.i18n-en .node-type-people #page-title:after{
+
+
+.i18n-en.node-type-people #page-title:after{
 content: "pepole";
 }
-
-
-/*  NODE - TYPE - PEOPLE */
 .node-type-people #region-content {
   position: relative;
   top: -20px;
 }
+*/
+/*  NODE - TYPE - PEOPLE */
+
 .field-name-field-category {
   margin-bottom: 45px;
 }
@@ -283,11 +309,14 @@ overflow: hidden;
 .node-type-people .field-name-field-role {
   min-height: 98px;
 }
+/*
 .responsive-layout-normal.node-type-people #region-sidebar-second{
   left: -15px;
   position: relative;
   top: -30px;
 }
+*/
+
 .field-name-field-email a {
   background: url("/sites/all/themes/subomega/images/email.png") no-repeat scroll right center rgba(0, 0, 0, 0);
   padding-right: 28px;

@@ -14,3 +14,10 @@ float:right;
 #block-search-form{
 float:left;
 }
+
+#search-block-form .form-item-search-block-form {
+  float: right;  
+}
+#block-search-form #edit-actions {
+  float: left;
+}

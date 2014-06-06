@@ -48,12 +48,17 @@
 //$beantest = $elements["bean"]["test-mobile-block"]["field_display_on"]["und"][0]["value"];
 ?>
 <div <?php 
-if($block->module === "bean"){
-	$beantest = $elements["bean"]["hello-world"];
-	$beantest2 = $beantest["field_display_on"];
-	$field_display_on = $beantest2["#items"];
-	echo ' data="'.$field_display_on[0]["value"].'" ';
+global $language;
+if(isset($elements["#node"]) && $block->title != "<none>"){
+	if(isset($elements["#node"]->title_field)){
+		if(isset($elements["#node"]->title_field[$language->language])){
+			if(isset($elements["#node"]->title_field[$language->language][0]["value"])){
+				$block->subject = $elements["#node"]->title_field[$language->language][0]["value"];
 }
+}
+}
+}
+
 ?> id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>

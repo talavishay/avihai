@@ -109,18 +109,42 @@ p {
 .field .field-label {
   font-size: 14.5px;
 }
+
 .CSS1Compat li a,
 .CSS1Compat a:link, 
-.CSS1Compat a:visited,
 .field-name-body a,
 .field-name-body a:link, 
-.field-name-body a:visited,
 .field-name-field-block a,
 .field-name-field-block a:link, 
-.field-name-field-block a:visited{
+.field-name-field-block a{
 text-decoration-color: #fc6704;
- color: #fc6704 ;
+ color: #FC6704 ;
 }
+
+.CSS1Compat a:visited,
+.field-name-body a:visited,
+.field-name-body a:visited,
+.field-name-field-block a:visited,
+.field-name-field-block a:visited{
+color: #0e697b;
+}
+
+.CSS1Compat li a:hover,
+.field-name-body a:hover,
+.field-name-body a:hover:link, 
+.field-name-body a:hover:visited,
+.CSS1Compat a:hover:link, 
+.CSS1Compat a:hover:visited,
+.field-name-field-block a:hover:link, 
+.field-name-field-block a:hover:visited{
+color:#6d031a ;
+}
+.CSS1Compat li p:first-of-type img:first-child  ,
+.field-name-field-block p:first-of-type img:first-child  , 
+.field-name-body p:first-of-type img:first-child  {
+  margin-top: 0px !important;
+}
+
 
 .list {
   font-size: 22px;
@@ -199,29 +223,61 @@ width: 44%;
   line-height: 19px;
   padding-bottom: 10px;
 }
+html[lang=en] .CSS1Compat li,
+html[lang=en] .field-type-text-with-summary li,
+html[lang=en] .field-widget-text-textarea-with-summary li,
+html[lang=en] .list {
+  background-image: url("/sites/all/themes/subomega/images/bullet.png");
+  background-position: left 8px;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  list-style-image: none ;
+  list-style-type: none;
+  line-height: 19px;
+  padding-bottom: 10px;
+}
 .list-orange{
   background-image: url("/sites/all/themes/subomega/images/bullet-orange.png") !important;
 }
 .list-orange a{
 text-decoration:none;
-color: #333333 !important;
+
 }
 .arrow-orange {
   background-image: url("/sites/all/themes/subomega/images/arrow-orange.png");
   background-position: left 3px;
   background-repeat: no-repeat;
-  padding-left: 19px;
-float:left;
+  padding-left: 23px;
 margin-bottom: 20px;
 
 }
-.arrow-blue {
-  background-image: url("/sites/all/themes/subomega/images/arrow-blue.png");
-  background-position: left 3px;
+html[lang=en] .arrow-orange {
+  background-image: url("/sites/all/themes/subomega/images/arrow-orange_e.png");
+  background-position: right 3px;
   background-repeat: no-repeat;
-  padding-left: 19px;
+  padding-right: 23px;
+   padding-left:0px
+margin-bottom: 20px;
+
+}
+ .arrow-blue {
+  background-image: url("/sites/all/themes/subomega/images/arrow-blue.png");
+  background-position: left 5px;
+  background-repeat: no-repeat;
+  padding-left: 23px;
 color: #4C647B !important;
 float:left;
+margin-bottom: 20px;
+ 
+}
+ html[lang=en] .arrow-blue {
+  background-image: url("/sites/all/themes/subomega/images/arrow-blue_e.png");
+  background-position: right 3px;
+  background-repeat: no-repeat;
+  padding-right: 23px;
+   padding-left:0px;
+color: #4C647B !important;
+float:right;
 margin-bottom: 20px;
  
 }
@@ -229,8 +285,19 @@ margin-bottom: 20px;
   background-image: url("/sites/all/themes/subomega/images/arrow-white.png");
   background-position: left 3px;
   background-repeat: no-repeat;
-  padding-left: 19px;
+  padding-left: 23px;
 float:left;
+margin-bottom: 20px;
+color: white !important;
+  
+}
+html[lang=en] .arrow-white {
+  background-image: url("/sites/all/themes/subomega/images/arrow-white_e.png");
+  background-position: right 3px;
+  background-repeat: no-repeat;
+  padding-right: 23px;
+   padding-left:0px;
+float:right;
 margin-bottom: 20px;
 color: white !important;
   
@@ -241,6 +308,9 @@ width:250px;
 }
 .field-type-text-with-summary td {
   padding-left: 18px;
+}
+html[lang=en] .field-type-text-with-summary td {
+  padding-right: 18px;
 }
 .field-name-field-block .cke_3 {
   width: 310px;
