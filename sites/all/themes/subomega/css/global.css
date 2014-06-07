@@ -127,12 +127,9 @@ html[lang=en] .site-name-slogan {
      display: none;
 }
 
-html[lang="he"] .language-switcher-locale-url .he {
-     display: none;
-}
-
-html[lang="en"] .language-switcher-locale-url .en {
-     display: none;
+.i18n-he li.he.active ,
+.i18n-en li.en.active  {
+     display: none !important;
 }
 
 .front a#home {

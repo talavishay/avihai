@@ -12,3 +12,6 @@ sites/*/settings*.php
 /.settings*
 /.project
 /.buildpath
+
+
+/sites/all/modules/weinre

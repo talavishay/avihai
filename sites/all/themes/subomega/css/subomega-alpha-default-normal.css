@@ -66,6 +66,10 @@ padding-top: 0px;
   padding-right: 5px;
 
 }
+.i18n-en.block_menu_processed aside#region-sidebar-first #block-block-6  a {
+  padding-right: 10px;
+
+}
 .block_menu_processed aside#region-sidebar-first #block-block-6  a{
 border-bottom: 1px solid #e6e6e6;
 }
