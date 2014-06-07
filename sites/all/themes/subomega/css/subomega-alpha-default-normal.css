@@ -178,9 +178,7 @@ margin-right: 0px;
 
 }
 .block_menu_processed #region-sidebar-first {
-margin-left: 0 !important;
-margin-right: 20px !important;
-width: auto;
+
 overflow: visible;
 max-width: 150px;
 }
