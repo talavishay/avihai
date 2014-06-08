@@ -4,6 +4,9 @@ Drupal.avishay.BeforeCurrentLayoutReady = function(){
 
 var menu = jQuery("#nice-menu-1"),
 	lang_switch = jQuery( ".language-switcher-locale-url li" );
+//insert menu icon to menu
+//jQuery("ul",menu).prepend(jQuery( "#home" ));
+
 // ##  language switcher 
 jQuery('#en_switch').replaceWith(lang_switch.clone());
 jQuery("#block-menu-menu-footer .menu").append(lang_switch.clone());
@@ -94,6 +97,28 @@ Drupal.avishay._get_teams = function(){
 
 jQuery(document).ready(function(){	
 
+jQuery(window).bind('resize', function (a){
+	var windowBodyDif = jQuery(window).height()-jQuery("html").height();
+	if(Drupal.omega.getCurrentLayout() === "fluid" && windowBodyDif > 0  ){
+		var prev_height = jQuery(".responsive-layout-fluid #block-nodeblock-6").height();
+		jQuery(".responsive-layout-fluid #block-nodeblock-6").height(prev_height+windowBodyDif);
+	};
+});
+
+//~ 
+//~ (function(){//## MOBILE	#	field slideshow front --- responisive height -- 
+//~ var field_slideshow_front_responisive_height = function(){
+	//~ if(jQuery("body.front").length){
+		//~ jQuery(window).bind('resize', function (a){
+			//~ var windowBodyDif = jQuery(window).height()-jQuery("html").height();
+			//~ 
+		//~ });
+	//~ }
+//~ };
+//~ Drupal.avishay.fluid.push(field_slideshow_front_responisive_height);
+//~ })();
+
+
 (function(){//## MOBILE	#	menu_toggle -- 
 var menu_toggle = function(){
 	jQuery("#menu_toggle").bind("click", function(e){
@@ -137,7 +162,7 @@ Drupal.avishay.normal.push(side_menu_block);
 })();// ## 	END
 (function(){// ## 	touch menu behaviour	
 	var touch_menu_links_bind = function(){
-		jQuery(".menuparent a", menu).bind("click",function(e){
+		jQuery(".menuparent a").bind("click",function(e){
 			 menu_links_bind(e);
 		});
 	};	
@@ -148,13 +173,17 @@ jQuery(window).bind('resize', function (a) {
 	var CurrentLayout = Drupal.omega.getCurrentLayout();			
 	
 	if(CurrentLayout !== Drupal.avishay.prevLayout && Drupal.avishay.timestamp !== a.timeStamp){		
-		jQuery("body").addClass("responsive-layout-"+CurrentLayout).removeClass("responsive-layout-"+Drupal.avishay.prevLayout);
-		
+		if(CurrentLayout === "narrow"){
+			jQuery("body").addClass("responsive-layout-normal");
+		}
 		Drupal.avishay.BeforeCurrentLayoutReady();
+
+		if(CurrentLayout !== "narrow"){
+			jQuery(Drupal.avishay[CurrentLayout]).each(function(i, val){val()});
+		}else{
+			jQuery(Drupal.avishay.normal).each(function(i, val){ val(); });  
+		} 
 		
-		jQuery(Drupal.avishay[CurrentLayout]).each(function(i, val){		
-			val();						
-		});
 		Drupal.avishay.AfterCurrentLayoutReady();
 		
 		

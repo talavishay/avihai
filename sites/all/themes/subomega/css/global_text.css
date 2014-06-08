@@ -100,7 +100,9 @@ h2 {
 }
 li,div {
   font-size: /*14px*/14.5px;
+/*
   line-height: 16px;
+*/
 }
 p {
   line-height: 21px;
