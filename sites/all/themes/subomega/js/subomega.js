@@ -12,11 +12,19 @@ jQuery('#en_switch').replaceWith(lang_switch.clone());
 jQuery("#block-menu-menu-footer .menu").append(lang_switch.clone());
 jQuery("#block-nodeblock-70 li:nth-child(8)").replaceWith(lang_switch.clone());
 menu.append( lang_switch);
+jQuery('#home').attr("href", "/"+Drupal.settings.pathPrefix);
 
 // ## 	main search input behaviour
 var input = jQuery("#edit-search-block-form--2"),
 	lang = Drupal.settings.pathPrefix.replace(/\//,"");
 Drupal.avishay.search_text= {"en" : "search","he" : "חפשו"};
+if(jQuery(".page-search-node").length){
+	var term =  decodeURI(window.location.pathname.replace(/(.*)\/node\/(.*)/, "$2"));
+	if( term !== "" ){
+		Drupal.avishay.search_text= {"en" : term, "he" : term};
+		jQuery(input).val(term);
+	}
+}
 
 if(jQuery(input).val() === "" ){
      jQuery(input).val(Drupal.avishay.search_text[lang]);
@@ -58,8 +66,15 @@ Drupal.avishay.AfterCurrentLayoutReady = function(){
 		jQuery("article .field-name-field-category a").replaceWith('<div data-tid="'+tid+'" >'+cat.text()+'</div>');
 		jQuery('[data-tid="'+tid+'"]').addClass("active").parent("li").addClass("active-trail");
 	}
-
-
+	//####
+	
+	var	window_height = jQuery(window).height(),
+		page_height =0;
+	jQuery("#page > .section").each(function(i, val){page_height= page_height+jQuery(val).height()});
+	
+	if(window_height>page_height){
+			jQuery("#zone-content").css("min-height",370+(window_height-page_height));
+	}
 }
 Drupal.avishay._get_teams = function(){
 	if(Drupal.settings.teams){

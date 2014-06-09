@@ -65,10 +65,12 @@ ul ul,
 ol ol {
   padding-top: 0.5em;
 }
+/*
 .node ol,
 .node ul {
   padding-left: 1.2em;
 }
+*/
 
 .node ul.inline,
 .node ol.inline {
@@ -304,16 +306,22 @@ margin-bottom: 20px;
 color: white !important;
   
 }
-
+.i18n-en .image_float,
+html[lang=en] .image_float {
+  padding-right: 10px;
+  padding-left:0px;
+  padding-top:6px;
+}
+.i18n-he .image_float ,
+html[lang=he] .image_float {
+  padding-right: 0px;
+  padding-left:10px;
+  padding-top:6px;
+}
 #edit-field-block-und-0-value{
 width:250px;
 }
-.field-type-text-with-summary td {
-  padding-left: 18px;
-}
-html[lang=en] .field-type-text-with-summary td {
-  padding-right: 18px;
-}
+
 .field-name-field-block .cke_3 {
   width: 310px;
 }

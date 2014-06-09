@@ -25,7 +25,7 @@
 ?>
 <?php if ($search_results): ?>
 <?php print $pager; ?>
-  <h2 id="search-header"><?php print $search_totals.' <span>'.arg(2).'</span>'?></h2>
+  <h2 id="search-header"><?php print $search_totals.' <span id="search-term">'.arg(2).'</span>'?></h2>
   <ol class="search-results <?php print $module; ?>-results">
     <?php print $search_results; ?>
   </ol>

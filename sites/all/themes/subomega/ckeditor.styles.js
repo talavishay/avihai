@@ -1,5 +1,6 @@
 CKEDITOR.addStylesSet( 'drupal', [ 
 /* Block Styles */ 
+{ name : 'float image', element : 'img', attributes : { 'class' : 'image_float' } }, 
 { name : 'none', element : 'div', attributes : { 'class' : 'none' } }, 
 { name : 'none', element : 'p', attributes : { 'class' : 'none' } }, 
 { name : '2 col block', element : 'div', attributes : { 'class' : 'div-2-col' } }, 

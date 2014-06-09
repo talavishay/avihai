@@ -52,10 +52,11 @@ a,h1,h2,h3,h4,h5,h6{
 #search-block-form .form-submit {
 background-color: rgba(0, 0, 0, 0) !important;
 background-image: url("/sites/all/themes/subomega/images/magdelet.png") !important;
+background-position: center center;
 background-repeat: no-repeat !important;
 border: 0 solid #FFFFFF !important;
 border-radius: 0 !important;
-height: 18px;
+height: 21px;
 margin: 1px 0 0 5px !important;
 overflow: hidden !important;
 padding-bottom: 0 !important;
