@@ -389,6 +389,10 @@ margin-bottom: 90px;
 margin-top: 95px;
  padding-bottom: 8px;
 }
+.i18n-en #block-nodeblock-10 {
+    margin-top: 157px;
+  
+}
 #block-nodeblock-8 {
   background-color: #9b5777;
 }
@@ -695,6 +699,13 @@ html[lang=he] #block-block-5 {
   font-size: 14px;
 margin-bottom: 0px;
   }
+.i18n-he #block-menu-menu-footer {
+  float: right;
+}
+.i18n-en #block-menu-menu-footer {
+  float: left;
+}
+
 #block-menu-menu-footer li:after {
 content: ":";
 padding-left: 3px;
@@ -856,7 +867,7 @@ margin-top : 17px;
 }
 .responsive-layout-narrow .sidebar_first #region-content {
   
-  width: 535px;
+  width: 520px;
 }
 .i18n-he.responsive-layout-narrow #node-page-30 .field-name-body .field-item p:nth-child(n+2) {
     padding-right: 3%;
@@ -895,13 +906,28 @@ i18n-en.responsive-layout-narrow.not-front  a#home {
 .i18n-en.responsive-layout-narrow #block-search-form.block.block-search {
   position: absolute;
   right: 16px;
-  top: -109px;
+  top: 0px;
 }
 .i18n-he.responsive-layout-narrow #block-search-form.block.block-search {
   position: absolute;
   left: 16px;
-  top: -109px;
+  top: 0px;
 }
+.responsive-layout-narrow #block-nice-menus-1 {
+  padding-top: 34px;
+}
+.responsive-layout-narrow a#home {
+  position: absolute;
+}
+.i18n-he.responsive-layout-narrow #nice-menu-1 a {
+  padding: 8px 17px !important;
+}
+
+.responsive-layout-narrow #region-footer-first .block {
+  display: block !important;
+  width: 100%;
+}
+
 
 .i18n-he.responsive-layout-narrow #block-nodeblock-16 > .content{
 	background-size: 8px 165px;
