@@ -428,13 +428,14 @@ margin: 0px !important;
   display: block ;
 }
 .responsive-layout-fluid #home {
-  background-image: url("/sites/all/themes/subomega/images/home-icon-m.png");
-  float: right !important;
-  left: -1px !important;
-  margin: 0 4px;
-  padding: 0 0 10px !important;
-  position: relative !important;
-  top: -2px;
+background-image: url("/sites/all/themes/subomega/images/home-icon-m.png");
+float: right !important;
+height: 16px !important;
+left: -1px !important;
+margin: 0 4px !important;
+padding: 0 0 10px !important;
+position: relative !important;
+top: -2px;
 }
 html[lang=he] .responsive-layout-fluid #home {
  float: left !important;

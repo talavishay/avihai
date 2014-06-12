@@ -69,6 +69,7 @@ function responsive_layout_fluid(){
 		jQuery('body.front.responsive-layout-normal #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/front.jpg)").toggleClass("normal");
 		jQuery('body.page-node-11.responsive-layout-normal #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/node-11.jpg)").toggleClass("normal");
 		jQuery('body.node-type-people.responsive-layout-normal #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/abuot-4.jpg)").toggleClass("normal");
+		jQuery('body.front.responsive-layout-narrow #overlay_site').css("background","url(/sites/all/modules/overlay_site/images/אורך.jpg)").toggleClass("normal");
 	}
   }
 

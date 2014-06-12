@@ -1,3 +1,5 @@
+
+	
 #overlay_site {
      -moz-border-bottom-colors: none;
      -moz-border-left-colors: none;
@@ -27,7 +29,13 @@
      width: 980px;
      z-index: 10;
 }
+.responsive-layout-narrow #overlay_site {
+	
+right: 0;
+max-width: 768px !important;
+position: fixed;
 
+}
 .responsive-layout-fluid #overlay_site {
   right: 0 !important;
   width: 100%;
@@ -37,7 +45,7 @@
      bottom: 5%;
      top: auto;
 }
-
+s
 .overflow {
      overflow: hidden;
 }

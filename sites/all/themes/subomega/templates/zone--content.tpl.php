@@ -11,6 +11,9 @@ if ($wrapper):
 			$output = ' sidebar_first ';
 		} 
 	}
+	if($output == ''){
+		$output = ' no_sidebars ';
+	}
 	$attributes = preg_replace('/class="/', 'class="'.$output, $attributes);
 ?>
 
