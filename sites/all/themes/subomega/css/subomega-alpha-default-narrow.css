@@ -919,10 +919,12 @@ width: 748px !important;
   padding: 0px !important;
 width: 768px;
 }
+/*
 .responsive-layout-narrow .site-name-slogan {
   float: left;
   margin-left: 15px;
 }
+*/
 .responsive-layout-narrow.not-front .site-name-slogan {
   margin-left: 0px;
 }
