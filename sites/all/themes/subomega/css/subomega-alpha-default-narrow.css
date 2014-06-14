@@ -576,8 +576,8 @@ right: 0px;
 
 
 .responsive-layout-normal .site-name {
-  font-size: 36px;
-margin:0px 0 3px 17px;
+ font-size: 36px;
+margin: 0 0 3px 37px;
 }
 .responsive-layout-normal .site-name {
 
@@ -988,7 +988,7 @@ position: absolute;
 top: -125px;
 }
 .i18n-he.responsive-layout-narrow.front #block-search-form.block.block-search {
- left: 42px;
+ left: 62px;
 }
 .i18n-he.responsive-layout-narrow.not-front #block-search-form {
  left: 15px;
@@ -1107,3 +1107,9 @@ width: 23%;
   width: 80px;
   height: auto;
 }
+.responsive-layout-narrow #page{
+max-width:768px; 
+overflow:hidden;
+margin:0 auto; 
+}
+
