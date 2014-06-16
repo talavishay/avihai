@@ -1,0 +1,15 @@
+<?php
+function help_dialog_overlay_child_initialize(){
+	drupal_add_library('system', 'ui.dialog');
+	drupal_add_js(drupal_get_path("module", "help_dialog").'/jquery.dialogextend.js');
+	drupal_add_js(drupal_get_path("module", "help_dialog").'/help.js');
+//	drupal_set_message("overlay XXXXXX");
+}
+function help_dialog_init(){
+	if (path_is_admin(current_path())) {
+		drupal_add_library('system', 'ui.dialog');
+		drupal_add_js(drupal_get_path("module", "help_dialog").'/jquery.dialogextend.js');
+		drupal_add_js(drupal_get_path("module", "help_dialog").'/help.js');
+	//drupal_set_message("XXXX");
+	}
+}

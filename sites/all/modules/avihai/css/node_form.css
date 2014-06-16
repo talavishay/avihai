@@ -2,7 +2,35 @@
   width: 363px;
 }
 .filter-wrapper{
-/*display:none;*/
+display:none;
+}
+#edit-field-block{
+width: 400px;
 }
 
+html[dir=rtl] .form-item-language,
+html[dir=rtl] #edit-field-category{
+/*
+html[dir=rtl] #edit-field-role{
+*/
+float:left;
+margin-right:10px;
+}
+html[dir=ltr] .form-item-language,
+html[dir=ltr] #edit-field-category{
+/*
+html[dir=ltr] #edit-field-role{
+*/
+float:right;
+margin-left:10px;
+}
 
+/*	חוברת הדרכה	*/
+.ui-dialog .ui-dialog-titlebar {
+font-weight: bold;
+background: #e1e2dc;
+}
+.ui-dialog{
+direction:rtl;
+box-shadow: 0 3px 5px 0px black;
+}

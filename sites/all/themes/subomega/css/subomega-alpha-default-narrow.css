@@ -829,8 +829,13 @@ background: -ms-linear-gradient(top, #ffffff 40%,#a4b9cb 90%); /* IE10+ */
 background: linear-gradient(to bottom, #ffffff 40%,#a4b9cb 90%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a4b9cb',GradientType=0 ); /* IE6-8 */
 }
+/*
 .front #zone-content .block a {
   color: white !important;
+}
+*/
+.block .node-media-block .contextual-links-wrapper{
+display: none;
 }
 #menu_toggle{
 display:none;
