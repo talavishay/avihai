@@ -26,6 +26,12 @@ margin-left:10px;
 }
 
 /*	חוברת הדרכה	*/
+.form-item-title-field-und-0-value .description:before {
+
+content:"* עזרה: ";
+margin: 0 10px;
+}
+
 .ui-dialog .ui-dialog-titlebar {
 font-weight: bold;
 background: #e1e2dc;
