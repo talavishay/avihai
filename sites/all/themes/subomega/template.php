@@ -1,5 +1,7 @@
 <?php
-
+function subomega_entity_translation_unavailable($variables){
+	drupal_goto();
+}
 // drupal_add_library('system', 'ui.tooltip');
 //drupal_add_library('system', 'effect.slide');
 /*
