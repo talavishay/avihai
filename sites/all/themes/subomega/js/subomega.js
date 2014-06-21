@@ -2,7 +2,7 @@ Drupal.avishay = {"normal":[],"fluid":[],"prevLayout":"null", "isMSIE" : /*@cc_o
 Drupal.avishay.BeforeCurrentLayoutReady = function(){
 
 
-var menu = jQuery("#nice-menu-1"),
+var menu = jQuery("ul.nice-menu"),
 	lang_switch = jQuery( ".language-switcher-locale-url li" );
 //insert menu icon to menu
 //jQuery("ul",menu).prepend(jQuery( "#home" ));
@@ -44,7 +44,7 @@ jQuery('.i18n-en.node-type-people #page-title').text("People");
 Drupal.avishay.AfterCurrentLayoutReady = function(){
 
 	// ## 	teams menu adition to people link
-	pepole_menu_head = jQuery(".menu-622:not(.people)");
+	pepole_menu_head = (Drupal.settings.pathPrefix === "he/" )? jQuery(".menu-622") : jQuery(".menu-649");
 	pepole_menu_head.append(Drupal.avishay._get_teams()).addClass("people");
 	if(!jQuery("ul.hidden",pepole_menu_head).length){
 		pepole_menu_head.each(function(i, val){
@@ -58,7 +58,7 @@ Drupal.avishay.AfterCurrentLayoutReady = function(){
 	var page_people = jQuery("body").hasClass("page-people") ,
 		node_type_people = jQuery("body").hasClass("node-type-people"),
 		side_menu_block = jQuery('#block-block-6');
-	if(page_people || node_type_people){		jQuery(".menu-622").addClass("active-trail");		}
+	if(page_people || node_type_people){		jQuery(pepole_menu_head).addClass("active-trail");		}
 	if( node_type_people){
 		var cat = jQuery("article .field-name-field-category a"),
 			tid = cat.attr("href").replace(/(.*)term\/(.*)/, '$2');
@@ -154,12 +154,12 @@ var page_people = jQuery("body").hasClass("page-people") ,
 	
 	
 	
-if(page_people || node_type_people) { 	jQuery(".menu-544").addClass("active-trail");}
+if(page_people || node_type_people) { 	jQuery(".menu-544,.menu-646,").addClass("active-trail");}
 if(side_menu_block.length){
-	var side_menu = jQuery('#nice-menu-1 > li.active-trail').clone();;
+	var side_menu = jQuery('ul.nice-menu > li.active-trail').clone();;
 	if (!side_menu.length){
-		side_menu = jQuery('.nice-menu a.active').parents(".active-trail").last().clone();
-		side_menu = jQuery('.nice-menu a[href="/he/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%A9%D7%9C%D7%99%D7%97%D7%95%D7%AA%D7%A0%D7%95"]').first().parents(".active-trail").last().clone();
+		side_menu = jQuery('ul.nice-menu a.active').parents(".active-trail").last().clone();
+		side_menu = jQuery('ul.nice-menu a[href="/he/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%A9%D7%9C%D7%99%D7%97%D7%95%D7%AA%D7%A0%D7%95"]').first().parents(".active-trail").last().clone();
 	}
 	// set styling and states
 	jQuery("ul, li, a",side_menu).attr("style","");

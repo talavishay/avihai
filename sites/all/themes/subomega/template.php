@@ -1,6 +1,9 @@
 <?php
 function subomega_entity_translation_unavailable($variables){
+
+if(arg(0) !== "people"){
 	drupal_goto();
+}
 }
 // drupal_add_library('system', 'ui.tooltip');
 //drupal_add_library('system', 'effect.slide');
