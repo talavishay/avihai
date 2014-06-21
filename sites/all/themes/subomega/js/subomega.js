@@ -154,9 +154,11 @@ var page_people = jQuery("body").hasClass("page-people") ,
 	
 	
 	
-if(page_people || node_type_people) { 	jQuery(".menu-544,.menu-646,").addClass("active-trail");}
+if(page_people || node_type_people) { 	
+	jQuery(".menu-544,.menu-646").addClass("active-trail");
+}
 if(side_menu_block.length){
-	var side_menu = jQuery('ul.nice-menu > li.active-trail').clone();;
+	var side_menu = jQuery('ul.nice-menu > li.active-trail').clone();
 	if (!side_menu.length){
 		side_menu = jQuery('ul.nice-menu a.active').parents(".active-trail").last().clone();
 		side_menu = jQuery('ul.nice-menu a[href="/he/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%A9%D7%9C%D7%99%D7%97%D7%95%D7%AA%D7%A0%D7%95"]').first().parents(".active-trail").last().clone();
