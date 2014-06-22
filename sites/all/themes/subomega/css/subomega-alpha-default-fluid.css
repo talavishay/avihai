@@ -194,75 +194,75 @@ background-color: #EDEEEF;
 padding: 4px 0;
 margin-bottom: 1%;
 }
-.responsive-layout-fluid #block-nice-menus-1 li ul {
+.responsive-layout-fluid .block-nice-menus li ul {
     display: none;
 }
-.responsive-layout-fluid #block-nice-menus-1 li:hover > ul {
+.responsive-layout-fluid .block-nice-menus li:hover > ul {
     display: block !important;
 }
-.responsive-layout-fluid #block-nice-menus-1 .menuparent:hover >a ,
-.responsive-layout-fluid #block-nice-menus-1 a.active ,
-.responsive-layout-fluid #block-nice-menus-1 li.active-trail > a ,
-.responsive-layout-fluid #block-nice-menus-1 a:hover {
+.responsive-layout-fluid .block-nice-menus .menuparent:hover >a ,
+.responsive-layout-fluid .block-nice-menus a.active ,
+.responsive-layout-fluid .block-nice-menus li.active-trail > a ,
+.responsive-layout-fluid .block-nice-menus a:hover {
   background-color:  #9ab9d5 !important;
 }
 
 
-.responsive-layout-fluid #block-nice-menus-1 li:hover.menu-path-javascript-void0 > a ,
-.responsive-layout-fluid #block-nice-menus-1 li:hover.menuparent > a ,
-.responsive-layout-fluid #block-nice-menus-1 li.menuparent .menuparent:hover > a {
+.responsive-layout-fluid .block-nice-menus li:hover.menu-path-javascript-void0 > a ,
+.responsive-layout-fluid .block-nice-menus li:hover.menuparent > a ,
+.responsive-layout-fluid .block-nice-menus li.menuparent .menuparent:hover > a {
   background-image: url("/sites/all/themes/subomega/images/menu_arrow_down.png") !important ;
 }
-.responsive-layout-fluid #block-nice-menus-1 li.menuparent .menuparent > a ,
-.responsive-layout-fluid #block-nice-menus-1 li.menuparent > a {
+.responsive-layout-fluid .block-nice-menus li.menuparent .menuparent > a ,
+.responsive-layout-fluid .block-nice-menus li.menuparent > a {
 	background-image: url("/sites/all/themes/subomega/images/menu_arrow_right.png");
 }
-.i18n-he.responsive-layout-fluid #block-nice-menus-1 li.menuparent .menuparent > a {
+.i18n-he.responsive-layout-fluid .block-nice-menus li.menuparent .menuparent > a {
 	background-image: url("/sites/all/themes/subomega/images/menu_arrow_left.png");
 }
 
-.responsive-layout-fluid #block-nice-menus-1 a {
+.responsive-layout-fluid .block-nice-menus a {
 background-repeat: no-repeat;
 padding: 10% !important;
 }
-.i18n-he.responsive-layout-fluid #block-nice-menus-1 li.menuparent a {	
+.i18n-he.responsive-layout-fluid .block-nice-menus li.menuparent a {	
 	background-position: 5% center;
 }
-.i18n-en.responsive-layout-fluid #block-nice-menus-1 li.menuparent a {	
+.i18n-en.responsive-layout-fluid .block-nice-menus li.menuparent a {	
 	background-position: 95% center;
 }
-.i18n-he.responsive-layout-fluid #block-nice-menus-1 li.menuparent > a {
+.i18n-he.responsive-layout-fluid .block-nice-menus li.menuparent > a {
 	background-image: url("/sites/all/themes/subomega/images/menu_arrow_left.png");
 }
-.responsive-layout-fluid.i18n-en  #block-nice-menus-1 a {
+.responsive-layout-fluid.i18n-en  .block-nice-menus a {
 background-position: 10px center;
 }
 
-.responsive-layout-fluid #block-nice-menus-1 li.menu-path-javascript-void0 > a ,
-.responsive-layout-fluid #block-nice-menus-1 li.menuparent > a {
+.responsive-layout-fluid .block-nice-menus li.menu-path-javascript-void0 > a ,
+.responsive-layout-fluid .block-nice-menus li.menuparent > a {
   background: url("/sites/all/themes/subomega/images/menu_arrow_right.png") no-repeat scroll ;
   
 }
-.i18n-he.responsive-layout-fluid #block-nice-menus-1 li.menu-path-javascript-void0 > a,
-.i18n-he.responsive-layout-fluid #block-nice-menus-1 li.menuparent > a {
+.i18n-he.responsive-layout-fluid .block-nice-menus li.menu-path-javascript-void0 > a,
+.i18n-he.responsive-layout-fluid .block-nice-menus li.menuparent > a {
   background: url("/sites/all/themes/subomega/images/menu_arrow_left.png") no-repeat scroll 10px center;
 }
 
-.responsive-layout-fluid #block-nice-menus-1 .content  li.menuparent ul ul  a {
+.responsive-layout-fluid .block-nice-menus .content  li.menuparent ul ul  a {
 background-image: url("/sites/all/themes/subomega/images/bullet-white.png");
 padding: 0 10%;
 }
-.i18n-he.responsive-layout-fluid #block-nice-menus-1 .content  li.menuparent ul ul  a {
+.i18n-he.responsive-layout-fluid .block-nice-menus .content  li.menuparent ul ul  a {
 	background-position: 97% center;
 }
-.i18n-en.responsive-layout-fluid #block-nice-menus-1 .content  li.menuparent ul ul  a {
+.i18n-en.responsive-layout-fluid .block-nice-menus .content  li.menuparent ul ul  a {
 background-position: 3% center;
 }
 
-.responsive-layout-fluid #block-nice-menus-1 > .content > ul > li.menuparent > a {
+.responsive-layout-fluid .block-nice-menus > .content > ul > li.menuparent > a {
 padding-right: 3%;
 }
-.responsive-layout-fluid #block-nice-menus-1 li {
+.responsive-layout-fluid .block-nice-menus li {
   background-color: #3a5369;
   color:white !important;
   display: inline-block;
@@ -273,10 +273,10 @@ padding-right: 3%;
   position: static !important;
   width: 100%;
 }
-.responsive-layout-fluid #block-nice-menus-1 ul{
+.responsive-layout-fluid .block-nice-menus ul{
 padding:0px;
 }
-.responsive-layout-fluid #block-nice-menus-1 a{
+.responsive-layout-fluid .block-nice-menus a{
 color: #FFFFFF !important;
 display: block;
 padding: 13px 5px;
@@ -284,22 +284,22 @@ text-decoration: none;
 border-bottom: 1px solid #FFFFFF;
 
 }
-.responsive-layout-fluid #block-nice-menus-1 {
+.responsive-layout-fluid .block-nice-menus {
 position: absolute;
 left: -5px;
 top: 22px;
 z-index: 10;
 float: right;
 }
-html[lang=he] .responsive-layout-fluid #block-nice-menus-1 {
+html[lang=he] .responsive-layout-fluid .block-nice-menus {
 right: -5px;
 
 }
-.responsive-layout-fluid #block-nice-menus-1 .nice-menu{
+.responsive-layout-fluid .block-nice-menus .nice-menu{
 	width: 132px;
 }
 
-.responsive-layout-fluid  #block-nice-menus-1 .content{
+.responsive-layout-fluid  .block-nice-menus .content{
 display: none;
 float: right;
 }
