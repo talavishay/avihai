@@ -1,0 +1,13 @@
+name = Multiple Node Menu
+description = Replaces the node menu form with one that can handle multiple parents.
+core = 7.x
+dependencies[] = menu
+
+files[] = multiple_node_menu.test
+
+; Information added by drupal.org packaging script on 2012-04-13
+version = "7.x-1.0-beta1"
+core = "7.x"
+project = "multiple_node_menu"
+datestamp = "1334338008"
+
