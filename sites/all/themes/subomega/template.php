@@ -1,7 +1,7 @@
 <?php
 function subomega_entity_translation_unavailable($variables){
-
-if(arg(0) !== "people"){
+$arg = arg();
+if($arg[0] !== "people" && $arg[1] !== "11"){
 	drupal_goto();
 }
 }
