@@ -1,7 +1,12 @@
 <?php
 function avihai_init(){
+	global $language;
+	if($language->language == "en"){
+		menu_set_active_menu_names(array('menu-main-menu-en'));
+	}	
 	drupal_add_js(drupal_get_path("module", "avihai").'/js/avihai.js');	
 }
+
 function avihai_form_alter(&$form, &$form_state,$form_id){
                 $form['#attached']['css'][] = drupal_get_path("module", "avihai").'/css/node_form.css';
                 if($form_id == "block_admin_display_form"){

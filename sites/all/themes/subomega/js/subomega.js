@@ -44,8 +44,8 @@ jQuery('.i18n-en.node-type-people #page-title').text("People");
 Drupal.avishay.AfterCurrentLayoutReady = function(){
 
 	// ## 	teams menu adition to people link
-	pepole_menu_head = (Drupal.settings.pathPrefix === "he/" )? jQuery(".menu-622") : jQuery(".menu-649");
-	pepole_menu_head.append(Drupal.avishay._get_teams()).addClass("people");
+	pepole_menu_head = (Drupal.settings.pathPrefix === "en/" )? jQuery(".menu-649") : jQuery(".menu-622") ;
+	pepole_menu_head.once().append(Drupal.avishay._get_teams()).addClass("people");
 	if(!jQuery("ul.hidden",pepole_menu_head).length){
 		pepole_menu_head.each(function(i, val){
 			jQuery(val).bind("click", function(e){
@@ -137,7 +137,7 @@ jQuery(window).bind('resize', function (a){
 (function(){//## MOBILE	#	menu_toggle -- 
 var menu_toggle = function(){
 	jQuery("#menu_toggle").bind("click", function(e){
-				jQuery("#block-nice-menus-1 .content").toggle();	
+				jQuery(".block-nice-menus .content").toggle();	
 //				jQuery(e.currentTarget).toggleClass("red");
 	}).addClass("bind");
 };
@@ -146,11 +146,14 @@ Drupal.avishay.fluid.push(menu_toggle);
 (function(){// ## 	side menu 
 var side_menu_block = function(){
 //	console.log("Drupal.avishay.normal.push(side_menu_block);");
+if(Drupal.settings.pathPrefix === "en/")	{
+	jQuery('#block-block-7').attr("id","block-block-6");
+}
 
 var page_people = jQuery("body").hasClass("page-people") ,
 	node_type_people = jQuery("body").hasClass("node-type-people"),
 	side_menu_block = jQuery('#block-block-6');
-	
+
 	
 	
 	
