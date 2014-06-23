@@ -14,14 +14,9 @@ width:0px;
 height:0px;
 overflow:hidden;
 }
-/*
-
-img, div:not(.block), a {
-  transition-duration: 1s !important;
-  transition-property: width,height;
+div#region-preface-first:hover {
+overflow: visible;
 }
-*/
-
 /*
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
 */
@@ -167,6 +162,9 @@ padding: 1px 10px 0 8px;
 margin: 0px;
 overflow: hidden;
 width: 160px;
+}
+.i18n-en #block-search-form input.form-text {
+width: 130px;
 }
 #block-nodeblock-16 *,
 #block-block-3 * {
