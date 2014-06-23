@@ -40,3 +40,7 @@ background: #e1e2dc;
 direction:rtl;
 box-shadow: 0 3px 5px 0px black;
 }
+.page-admin-structure-menu-manage-menu-main-menu-en .menu-operations:last-child ,
+.page-admin-structure-menu-manage-main-menu .menu-operations:last-child {
+  display: none;
+}
