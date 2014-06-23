@@ -1,5 +1,5 @@
 (function (jQuery) {
-Drupal.behaviors.exampleModule = {
+Drupal.behaviors.help_dialog = {
 	attach: function (context, settings) {
 		jQuery("a[data-help]").once().on("click",function(e){
 			e.preventDefault();			
@@ -25,7 +25,7 @@ Drupal.behaviors.exampleModule = {
 											jQuery(this).parent(".ui-dialog").css("top","50px") ;
 										},
 						"load" : function(evt, dlg){ 
-											Drupal.behaviors.exampleModule.attach();
+											Drupal.behaviors.help_dialog.attach();
 										},
 					});
 		//          jQuery('#imgLoader').hide();            /* hide the image loader */
