@@ -9,8 +9,10 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
 
-	<?php if ($node->type === "programs_israel" || $node->type === "programs_overseas" ): ?>
-	    <h2 class="title" id="page-sub-title"><?php print $sub_title ; ?></h2>
+	<?php 	if (!is_null($node) ): ?>
+		<?php if ($node->type === "programs_israel" || $node->type === "programs_overseas" ): ?>
+			<h2 class="title" id="page-sub-title"><?php print $sub_title ; ?></h2>
+		<?php endif; ?>
 	<?php endif; ?>
 
     

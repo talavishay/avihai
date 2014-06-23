@@ -32,10 +32,12 @@ function _display_trail($tree) {
 			// If if's active...
 			if ($node['link']['in_active_trail']) {
 				// ...add the link to the trail
+				//~ $localize_options = is_null($node['link']['localize_options'])  ? "" : $node['link']['localize_options'];
+				//~ drupal_set_message(gettype($node['link']['localize_options']) );
 				$trail[] = array(
 						'title' => $node['link']['title'],
 						'href' => $node['link']['href'],
-						'localize_options' => $node['link']['localize_options'],
+						//~ 'localize_options' => $localize_options,
 						'type' => $node['link']['type'],
 				);
 				// ...descend to it's children.
