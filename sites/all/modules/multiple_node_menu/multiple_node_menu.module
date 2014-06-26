@@ -53,7 +53,7 @@ function multiple_node_menu_save($node) {
       // Set path to node being saved.
       $link['link_path'] = "node/$node->nid";
 
-      // If 'Enabled' checkbox was ticked. Set hidden to FALSE and vice-versa. 
+      // If 'Enabled' checkbox was ticked. Set hidden to FALSE and vice-versa.
       if (isset($link['enabled'])) {
         $link['hidden'] = (int) !$link['enabled'];
       }
@@ -271,7 +271,7 @@ function multiple_node_menu_link_form($node, $link = array(), $edit = FALSE) {
  */
 function multiple_node_menu_node_submit($node, $form, &$form_state) {
   // Include 'Add new menu link' form values if it was set.
-  multiple_node_menu_add_link_submit($form, $form_state);
+  _multiple_node_menu_add_link($form_state);
 
   $values = $form_state['values']['multiple_node_menu'];
   if (!empty($values['current_links'])) {
@@ -298,7 +298,7 @@ function multiple_node_menu_node_submit($node, $form, &$form_state) {
  */
 function multiple_node_menu_ajax_callback($form, $form_state) {
   // Clear fields for link specific values. The other fields will default to
-  // previous entered values. 
+  // previous entered values.
   $form['multiple_node_menu']['link']['add_link']['link_title']['#value'] = '';
   $form['multiple_node_menu']['link']['add_link']['description']['#value'] = '';
 
@@ -339,7 +339,7 @@ function theme_multiple_node_menu_current_links($variables) {
       drupal_render($form[$key]['enabled']),
       drupal_render($form[$key]['remove']),
     );
-  }  
+  }
 
   $headers = array(
     t('Menu link title and description'),
@@ -356,23 +356,12 @@ function theme_multiple_node_menu_current_links($variables) {
  * Submit handler for 'Add menu link' button.
  */
 function multiple_node_menu_add_link_submit($form, &$form_state) {
-  $values = &$form_state['values']['multiple_node_menu']['add_link'];
 
-  if (!empty($values['link_title'])) {
-    $node = &$form_state['node'];
-
-    // Decompose parent into 'menu_name' and 'plid'.
-    if (!empty($values['parent'])) {
-      list($values['menu_name'], $values['plid']) = explode(':', $values['parent']);
-    }
-
-    // Append new added link to node object.
-    _multiple_node_menu_set_defaults($node, $values);
-    $node->multiple_node_menu_links[] = $values;
-
+  if (_multiple_node_menu_add_link($form_state)) {
     // Cause the form to rebuild so the new items show up.
     $form_state['rebuild'] = TRUE;
   }
+
 }
 
 /**
@@ -396,6 +385,37 @@ function multiple_node_menu_remove_link_submit($form, &$form_state) {
 
   // Cause the form to rebuild so the item is removed from the list.
   $form_state['rebuild'] = TRUE;
+}
+
+/**
+ * Determines whether a new menu item should be added based on a node_form form
+ * state.
+ * @param  array $form_state Form state passed from Node form.
+ * @return bool              Whether or not a new menu item was added.
+ */
+function _multiple_node_menu_add_link($form_state) {
+
+  $values = &$form_state['values']['multiple_node_menu']['add_link'];
+
+  if (!empty($values['link_title'])) {
+    $node = &$form_state['node'];
+
+    // Decompose parent into 'menu_name' and 'plid'.
+    if (!empty($values['parent'])) {
+      list($values['menu_name'], $values['plid']) = explode(':', $values['parent']);
+    }
+
+    // Append new added link to node object.
+    _multiple_node_menu_set_defaults($node, $values);
+    $node->multiple_node_menu_links[] = $values;
+
+    // Menu link was added.
+    return TRUE;
+
+  }
+
+  // No menu link was added.
+  return FALSE;
 }
 
 /**
