@@ -214,17 +214,20 @@ color: #3e3e3e;
   display: none;
 
 }
+.view-id-people_english h3 ,
 .view-id-people h3 {
   color: #4C647B;
 font-size: 16px;
 font-weight: bold;
 margin-bottom: 25px;
 }
+.view-id-people_english .views-field-nothing a ,
 .view-id-people .views-field-nothing a {
   color: #333333;
   font-size: 14px;
 }
 
+.view-id-people_english .views-field-nothing  ,
 .view-id-people .views-field-nothing  {
 background-image: url("/sites/all/themes/subomega/images/bullet.png");
 background-repeat: no-repeat;
@@ -233,17 +236,21 @@ padding-left: 15px;
 margin-bottom: 14px;
 }
 
+.i18n-he .view-id-people_english .views-field-nothing  ,
 .i18n-he .view-id-people .views-field-nothing  {
 background-position: right  7px !important;
 padding-right: 10px;
 }
+.i18n-en .view-id-people_english .views-field-nothing  ,
 .i18n-en .view-id-people .views-field-nothing  {
 background-position: left 7px ;
 }
+.view-id-people_english .views-field-nothing a:hover ,
 .view-id-people .views-field-nothing a:hover {
   color: #f05602;
 }
 /*node-type-people*/
+.view-id-people_english .field-name-title-field ,
 .node-type-people .field-name-title-field {
 color: #F05602;
 font-size: 14px;

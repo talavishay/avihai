@@ -25,6 +25,7 @@ function avihai_block_list_alter(&$blocks){
 	$display_menu = true;
 	$node = menu_get_object();	
 	$menuParent = menu_get_active_trail();
+//var_dump($menuParent);die();exit();
 	if(isset($menuParent[1])){
 		if(isset($menuParent[1]["mlid"])){
 			if($menuParent[1]["mlid"] != 548 && $menuParent[1]["mlid"] != 557 && $menuParent[1]["mlid"] != 544){
@@ -43,6 +44,11 @@ function avihai_block_list_alter(&$blocks){
 			$display_menu = true;
 		}
 	}
+
+	if($menuParent[1]["map"][0] === "האנשים"){		
+		$display_menu = true;
+	}
+
 	if($display_menu){
 		drupal_add_js(array( "side_menu"=> $display_menu, "teams" => _get_teams()), 'setting');
 	}else{

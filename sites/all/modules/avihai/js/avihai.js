@@ -21,8 +21,14 @@ Drupal.behaviors.avihai = {
 			});
 			
 			jQuery("#edit-multiple-node-menu-enabled:not(:checked)").click();
-
-			}
+			
+			jQuery(".language-link[lang=en]").attr("href", function(a, b){
+				return b.replace(/%D7%94%D7%90%D7%A0%D7%A9%D7%99%D7%9D/,"people");
+			});
+			jQuery(".language-link[lang=he]").attr("href", function(a, b){
+				return b.replace(/people/,"האנשים");
+			});
+	}
 }
 })();
 

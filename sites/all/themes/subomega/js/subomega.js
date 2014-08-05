@@ -81,18 +81,20 @@ Drupal.avishay._get_teams = function(){
 		var ul = jQuery("<ul></ul>");			
 		
 		jQuery(Drupal.settings.teams).each(function(i, val){
-			var href = '/'+Drupal.settings.pathPrefix+'people/'+val.tid;
+			var view_path = (Drupal.settings.pathPrefix === "he/") ? "האנשים/" : "people/";
+			var href = '/'+Drupal.settings.pathPrefix+view_path+val.tid;
 			var attr = {//"id": 'team_'+val.tid,
 						"href": href,
 						"data-tid": val.tid
 						};
 				// views - page people -- menu active stat
-			var regexp = new RegExp('/people/'+val.tid, 'g');
+			var en_regexp = new RegExp('/people/'+val.tid, 'g');
+			var he_regexp = new RegExp('/%D7%94%D7%90%D7%A0%D7%A9%D7%99%D7%9D/'+val.tid, 'g');
 			
 			var link = jQuery('<li></li>').append(jQuery('<a></a>').attr(attr).text(val.name));
 				
 			
-			if( window.location.pathname.match(regexp)){
+			if( window.location.pathname.match(en_regexp) ||  window.location.pathname.match(he_regexp)){
 	
 				//console.log("window.location.pathname.match(regexp)");
 				jQuery(link).addClass("active-trail");
@@ -150,7 +152,8 @@ if(Drupal.settings.pathPrefix === "en/")	{
 	jQuery('#block-block-7').attr("id","block-block-6");
 }
 
-var page_people = jQuery("body").hasClass("page-people") ,
+var peoplePageClass =  Drupal.settings.pathPrefix === "en/"  ? "page-people" : "page-האנשים";
+var page_people = jQuery("body").hasClass(peoplePageClass) ,
 	node_type_people = jQuery("body").hasClass("node-type-people"),
 	side_menu_block = jQuery('#block-block-6');
 
@@ -158,7 +161,7 @@ var page_people = jQuery("body").hasClass("page-people") ,
 	
 	
 if(page_people || node_type_people) { 	
-	jQuery(".menu-544,.menu-646").addClass("active-trail");
+	jQuery(".menu-544,.menu-646,.menu-622").addClass("active-trail");
 }
 if(side_menu_block.length){
 	var side_menu = jQuery('ul.nice-menu > li.active-trail').clone();
