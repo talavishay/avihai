@@ -762,8 +762,8 @@ padding-left: 1px !important;
 padding-right: 1px !important;
 
 }
-#zone-footer .region{
-  padding: 10px;
+#zone-footer #region-footer-first {
+  padding-top: 10px;
 }
 
 #node-page-30 .field-name-body .field-item p:nth-child(n+2) {
