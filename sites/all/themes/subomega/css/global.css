@@ -76,6 +76,10 @@ text-indent: -9999px;
 top: 0;
 width: 19px;
 }
+html[lang=en] .block-search-api-page .form-submit {
+left: 118px !important;
+}
+
 #edit-search-block-form--2,
 #search-block-form .form-type-textfield .form-item-search-block-form input,
 .block-search-api-page .form-type-textfield .form-item-search-block-form input{
@@ -169,6 +173,10 @@ border-radius: 7px;
 float: left;
 padding: 1px 10px 0 8px;
 z-index: 10;
+}
+.i18n-en .block-search-api-page,
+.i18n-en #block-search-form {
+float:right;
 }
 
 .block-search-api-page #edit-actions ,
