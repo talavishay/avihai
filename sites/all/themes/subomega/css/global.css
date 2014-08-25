@@ -43,33 +43,50 @@ a,h1,h2,h3,h4,h5,h6{
 .i18n-he .nice-menu .he.active{
 	display: none !important;
 }
+.block-search-api-page,
 #block-search-form {
      float: left;
 }
+.block-search-api-page .form-type-textfield {
+margin: 0px;
+padding: 0px;
+}
+.block-search-api-page input {
+border:0px solid black;
+background: transparent;
+}
+
+.block-search-api-page .form-submit ,
 #search-block-form .form-submit {
 background-color: rgba(0, 0, 0, 0) !important;
 background-image: url("/sites/all/themes/subomega/images/magdelet.png") !important;
 background-position: center center;
 background-repeat: no-repeat !important;
-border: 0 solid #FFFFFF !important;
+border: 0 solid #ffffff !important;
 border-radius: 0 !important;
 height: 21px;
+left: 0;
 margin: 1px 0 0 5px !important;
 overflow: hidden !important;
 padding-bottom: 0 !important;
 padding-right: 0 !important;
 padding-top: 0 !important;
+position: absolute;
 text-indent: -9999px;
+top: 0;
 width: 19px;
 }
 #edit-search-block-form--2,
-#search-block-form .form-type-textfield .form-item-search-block-form input{
+#search-block-form .form-type-textfield .form-item-search-block-form input,
+.block-search-api-page .form-type-textfield .form-item-search-block-form input{
 color: #63809b;
 background-color: rgba(0, 0, 0, 0);
 border: 0 solid #FFFFFF !important;
   font-size: 16px;
 padding: 0px;
 }
+
+.block-search-api-page .form-item-search-block-form,
 #search-block-form .form-item-search-block-form{
 margin: 0px;
 float: left;
@@ -145,24 +162,27 @@ width: 21px;
 }
 /*front*/
 
+.block-search-api-page,
 #block-search-form {
-background-color: #E1E9F0;
+background-color: #e1e9f0;
 border-radius: 7px;
-float: right;
-/*padding: 0 3px;*/
-z-index: 10;
+float: left;
 padding: 1px 10px 0 8px;
-
+z-index: 10;
 }
+
+.block-search-api-page #edit-actions ,
 #block-search-form #edit-actions {
   display: block;
   float: right;
 }
+..block-search-api-page  input.form-text,
 #block-search-form input.form-text {
 margin: 0px;
 overflow: hidden;
 width: 160px;
 }
+.i18n-en .block-search-api-page  input.form-text ,
 .i18n-en #block-search-form input.form-text {
 width: 130px;
 }
@@ -424,3 +444,9 @@ padding: 0 4px;
 .page-node-35 #block-fieldblock-node-programs-israel-default-field-block td {
   padding-bottom: 8px;
 }
+/* block-search-api-page */
+.block-search-api-page .block-title{
+display:none;
+
+}
+/*block-search-api-page ## END*/

@@ -89,9 +89,11 @@ display: block;
 .responsive-layout-fluid .fluid {
      display: block ;
 }
+.responsive-layout-fluid .block-search-api-page,
 .responsive-layout-fluid #block-search-form {
   min-width: 73%;
 }
+.responsive-layout-fluid .block-search-api-page .form-submit ,
 .responsive-layout-fluid #search-block-form .form-submit {
   background-position: 0 2px;
   background-size: 14px auto;
@@ -304,6 +306,7 @@ display: none;
 float: right;
 }
 #edit-search-block-form--2, 
+.block-search-api-page .form-type-textfield .form-item-search-block-form input ,
 #search-block-form .form-type-textfield .form-item-search-block-form input {
   width: 88%;
 }
