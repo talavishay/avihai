@@ -37,8 +37,8 @@ jQuery(input).on("click focus", function(e){
 
 // ##  outbound links behaviour   
 jQuery('[href^=http]').attr("target","_blank");
-jQuery('.i18n-he.node-type-people #page-title').text("האנשים");
-jQuery('.i18n-en.node-type-people #page-title').text("People");
+jQuery('.i18n-he.node-type-people #page-title').text("האנשים שלנו");
+jQuery('.i18n-en.node-type-people #page-title').text("Our People");
 
 };
 Drupal.avishay.AfterCurrentLayoutReady = function(){
@@ -91,8 +91,8 @@ Drupal.avishay._get_teams = function(){
 			var en_regexp = new RegExp('/people/'+val.tid, 'g');
 			var he_regexp = new RegExp('/%D7%94%D7%90%D7%A0%D7%A9%D7%99%D7%9D/'+val.tid, 'g');
 			
-			var link = jQuery('<li></li>').append(jQuery('<a></a>').attr(attr).text(val.name));
-				
+//			var link = jQuery('<li></li>').append(jQuery('<a></a>').attr(attr).text(val.name));
+			var link = jQuery('<li></li>').append(jQuery('<a></a>').attr(attr).text(val.name.replace(/&quot;/i ,"\"")));
 			
 			if( window.location.pathname.match(en_regexp) ||  window.location.pathname.match(he_regexp)){
 	

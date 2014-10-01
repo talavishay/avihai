@@ -491,7 +491,7 @@ width: 172px;
 #block-search-form {
 margin-top: 9px ;
 border: 1px solid #808080;
-
+   position: relative;
 }
 .block-system.block-menu .block-title{
 	display: none;

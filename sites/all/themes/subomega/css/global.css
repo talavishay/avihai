@@ -4,7 +4,9 @@
 .site-name {
 display: none;
 }
-
+.logged-in .zone-footer .region {
+overflow: visible;
+}
 .responsive-layout-fluid #zone-menu-wrapper{
 visibility: hidden;
 }
@@ -50,6 +52,8 @@ a,h1,h2,h3,h4,h5,h6{
 .block-search-api-page .form-type-textfield {
 margin: 0px;
 padding: 0px;
+max-width:90%;
+float:left;
 }
 .block-search-api-page input {
 border:0px solid black;
@@ -71,13 +75,17 @@ overflow: hidden !important;
 padding-bottom: 0 !important;
 padding-right: 0 !important;
 padding-top: 0 !important;
-position: absolute;
 text-indent: -9999px;
-top: 0;
 width: 19px;
 }
-html[lang=en] .block-search-api-page .form-submit {
+.responsive-layout-normal .block-search-api-page .form-submit {
+	position: absolute;
+top: 0;
+
+}
+html[lang=en] .responsive-layout-normal .block-search-api-page .form-submit {
 left: 118px !important;
+
 }
 
 #edit-search-block-form--2,

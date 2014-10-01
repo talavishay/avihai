@@ -89,6 +89,9 @@ display: block;
 .responsive-layout-fluid .fluid {
      display: block ;
 }
+.i18n-he.responsive-layout-fluid .block-search-api-page .form-type-textfield {
+  float: right;
+}
 .responsive-layout-fluid .block-search-api-page,
 .responsive-layout-fluid #block-search-form {
   min-width: 73%;
@@ -309,6 +312,12 @@ float: right;
 .block-search-api-page .form-type-textfield .form-item-search-block-form input ,
 #search-block-form .form-type-textfield .form-item-search-block-form input {
   width: 88%;
+}
+.i18n-en.responsive-layout-fluid .block-search-api-page .form-submit {
+float:right;
+}
+.i18n-he.responsive-layout-fluid .block-search-api-page .form-submit {
+float:left;
 }
 
 

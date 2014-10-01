@@ -3,16 +3,19 @@ function avihai_init(){
 	global $language;
 	if($language->language == "en"){
 		menu_set_active_menu_names(array('menu-main-menu-en'));
-	}	
+	}
 	drupal_add_js(drupal_get_path("module", "avihai").'/js/avihai.js');	
 }
 
 function avihai_form_alter(&$form, &$form_state,$form_id){
                 $form['#attached']['css'][] = drupal_get_path("module", "avihai").'/css/node_form.css';
                 if($form_id == "block_admin_display_form"){
-
-drupal_add_js('jQuery(document).ready(function () { jQuery(".action-links a").attr("href", "/node/add/media-block");})', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
-  }
+			drupal_add_js('jQuery(document).ready(function () { jQuery(".action-links a").attr("href", "/node/add/media-block");})', array('type' => 'inline', 'scope' => 'footer', 'weight' => 5));
+		}
+ if($form_id == "search_api_page_search_form_search"){
+//var_dump($form);die();exit();
+                $form["keys_1"]["#attributes"]["placeholder"] = t("search");
+        }
 
 }
 
